@@ -1,12 +1,12 @@
-import profilePicture from "../../public/homePicture.jpg";
+import profilePicture from "/homePicture.jpg";
 
 const HomePicture = () => {
   return (
-    <div className="w-1/2 h-auto">
+    <div className="flex-none w-1/2 h-auto">
       <img
         src={profilePicture}
         alt="Nice picture for the home page."
-        className="w-full h-auto"
+        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-filter duration-300"
       />
     </div>
   );
