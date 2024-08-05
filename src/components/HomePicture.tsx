@@ -1,6 +1,4 @@
-import React from 'react'
 import profilePicture from "../../public/homePicture.jpg"
-
 
 const HomePicture = () => {
   return (
