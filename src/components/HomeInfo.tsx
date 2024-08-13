@@ -33,7 +33,7 @@ const HomeInfo = () => {
         on the world and those around me.
       </p>
       <div className="flex flex-col items-center pt-8 space-y-4">
-        <div className="flex space-x-4">
+        <nav className="flex space-x-4">
           <a
             href="https://github.com/williamntlam"
             target="_blank"
@@ -72,7 +72,13 @@ const HomeInfo = () => {
           >
             Devpost
           </a>
-        </div>
+          <a
+            href="https://williams-reflections.netlify.app/"
+            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900"
+          >
+            Blogsite
+          </a>
+        </nav>
       </div>
     </div>
   );
