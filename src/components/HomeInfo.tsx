@@ -30,7 +30,15 @@ const HomeInfo = () => {
         being a<span className="text-blue-500"> positive influence </span>
         everywhere I go. Through my interests and values, I hope to leave a
         <span className="text-blue-500"> positive impact </span>
-        on the world and those around me.
+        on the world and those around me. <br></br> <br></br>
+        Please feel free to <span className="text-blue-500">explore</span> the
+        <span className="text-yellow-400"> links </span> I've{" "}
+        <span className="text-blue-500">shared</span> down below - This includes
+        a <span className="text-emerald-400">blogsite</span> - a place where I
+        <span className="text-blue-500"> share</span> my{" "}
+        <span className="text-yellow-400">thoughts</span> and{" "}
+        <span className="text-yellow-400">reflections</span> from my day to day
+        life.
       </p>
       <div className="flex flex-col items-center pt-8 space-y-4">
         <nav className="flex space-x-4">
