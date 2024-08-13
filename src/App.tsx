@@ -3,7 +3,7 @@ import HomeInfo from "./components/HomeInfo";
 
 function App() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen">
       <HomePicture />
       <HomeInfo />
     </div>

@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const HomeInfo = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black">
-      <h1 className="text-4xl font-bold text-white pb-5">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white pb-5">
         <center>
           <Typewriter
             words={["Hello!", "My name is William Lam :)", "Enjoy your stay!"]}
@@ -18,7 +18,7 @@ const HomeInfo = () => {
           />
         </center>
       </h1>
-      <p className="text-white leading-relaxed font-montserrat w-2/3 text-center">
+      <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed font-montserrat w-full sm:w-3/4 lg:w-2/3 text-center px-2 sm:px-4">
         I'm currently a student at the{" "}
         <span className="text-blue-500"> University of Toronto </span> majoring
         in
@@ -40,12 +40,13 @@ const HomeInfo = () => {
         <span className="text-yellow-400">reflections</span> from my day to day
         life.
       </p>
-      <div className="flex flex-col items-center pt-8 space-y-4">
-        <nav className="flex space-x-4">
+      <div className="flex flex-col items-center pt-8 space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+        <nav className="flex flex-col sm:flex-row sm:space-x-4">
           <a
             href="https://github.com/williamntlam"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-center"
           >
             <FontAwesomeIcon
               icon={faGithub}
@@ -56,6 +57,7 @@ const HomeInfo = () => {
             href="https://www.linkedin.com/in/william-lam-b3a8a2213/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-center"
           >
             <FontAwesomeIcon
               icon={faLinkedin}
@@ -64,25 +66,25 @@ const HomeInfo = () => {
           </a>
           <a
             href=""
-            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900"
+            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900 text-center mt-4 sm:mt-0"
           >
             Resume
           </a>
           <a
             href=""
-            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900"
+            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900 text-center mt-4 sm:mt-0"
           >
             Projects
           </a>
           <a
             href="https://devpost.com/williamntlam"
-            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900"
+            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900 text-center mt-4 sm:mt-0"
           >
             Devpost
           </a>
           <a
             href="https://williams-reflections.netlify.app/"
-            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900"
+            className="bg-black text-white px-4 py-2 rounded border-2 border-white hover:bg-blue-900 text-center mt-4 sm:mt-0"
           >
             Blogsite
           </a>
