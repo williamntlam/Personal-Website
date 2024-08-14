@@ -3,11 +3,11 @@ import sunglassesPhoto from "/sunglassesPhoto.jpg";
 
 const HomePicture = () => {
   return (
-    <section className="w-full h-60 md:h-auto relative group">
+    <section className="w-full h-full flex md:h-auto relative group">
       <img
         src={profilePicture}
         alt="Nice picture for the home page."
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover flex-1"
       />
       <img
         src={sunglassesPhoto}
