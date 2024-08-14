@@ -1,5 +1,5 @@
 import profilePicture from "/homePicture.jpg";
-import funnyProfilePicture from "/funnyHomePicture.jpg";
+import sunglassesPhoto from "/sunglassesPhoto.jpg";
 
 const HomePicture = () => {
   return (
@@ -10,7 +10,7 @@ const HomePicture = () => {
         className="w-full h-full object-cover"
       />
       <img
-        src={funnyProfilePicture}
+        src={sunglassesPhoto}
         alt="Another picture on hover."
         className="w-full h-full object-cover absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       />
