@@ -34,7 +34,9 @@ const HomeInfo = () => {
         Please feel free to <span className="text-blue-500">explore</span> the
         <span className="text-yellow-400"> links </span> I've{" "}
         <span className="text-blue-500">shared</span> down below - This includes
-        a <a href="https://williams-reflections-8dt0g1jib-william-lams-projects.vercel.app/"><span className="text-emerald-400">blogsite</span></a> - a place where I
+        a <a href="https://williams-reflections-8dt0g1jib-william-lams-projects.vercel.app/">
+            <span className="text-emerald-400 hover:text-emerald-800">blogsite</span>
+        </a> - a place where I
         <span className="text-blue-500"> share</span> my{" "}
         <span className="text-yellow-400">thoughts</span> and{" "}
         <span className="text-yellow-400">reflections</span> from my day to day
