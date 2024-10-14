@@ -1,4 +1,4 @@
-import profilePicture from "/homePicture.jpg";
+import profilePicture from "/home-picture-v2.jpg";
 import sunglassesPhoto from "/sunglassesPhoto.jpg";
 
 const HomePicture = () => {
