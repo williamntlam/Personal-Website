@@ -104,34 +104,37 @@ const HomeInfo = () => {
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black">
       {/* Full-Screen Modal */}
       {showProjects && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-8 z-50 overflow-y-auto">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-10 z-50 overflow-y-auto min-h-screen">
           {/* Close Button */}
           <button
             onClick={() => setShowProjects(false)}
-            className="fixed top-4 left-4 text-white hover:text-red-500 text-2xl font-bold"
+            className="fixed top-8 left-8 text-white hover:text-red-500 text-2xl font-bold"
           >
             Exit
           </button>
 
           {/* Project List */}
-          <div className="w-full max-w-3xl mx-auto space-y-6">
+          <div className="w-full max-w-4xl mx-auto space-y-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-black bg-opacity-60 text-white p-6 rounded-lg shadow-lg w-full border border-gray-700"
+                className="bg-black bg-opacity-60 text-white p-8 rounded-lg shadow-lg w-full border border-gray-600"
               >
                 {/* Project Title */}
-                <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
+                <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm mb-3">
+                <p className="text-gray-300 text-base mb-4">
                   {project.description}
                 </p>
 
+                {/* Achievements */}
                 {project.achievements && project.achievements.length > 0 && (
-                  <div className="mb-3">
-                    <h3 className="text-yellow-400 font-semibold">🏆 Achievements</h3>
-                    <ul className="text-gray-400 text-sm space-y-1">
+                  <div className="mb-4">
+                    <h3 className="text-yellow-400 font-semibold text-xl">
+                      🏆 Achievements
+                    </h3>
+                    <ul className="text-gray-400 text-base space-y-2">
                       {project.achievements.map((achievement, i) => (
                         <li key={i}>- {achievement}</li>
                       ))}
@@ -140,27 +143,31 @@ const HomeInfo = () => {
                 )}
 
                 {/* Tech Stack */}
-                <div className="mb-3">
-                  <h3 className="text-blue-400 font-semibold">🛠 Tech Stack</h3>
-                  <p className="text-gray-400 text-sm">
+                <div className="mb-4">
+                  <h3 className="text-blue-400 font-semibold text-xl">
+                    🛠 Tech Stack
+                  </h3>
+                  <p className="text-gray-400 text-base">
                     {project.techStack?.join(", ")}
                   </p>
                 </div>
 
                 {/* Tools Used */}
-                <div className="mb-3">
-                  <h3 className="text-green-400 font-semibold">
+                <div className="mb-4">
+                  <h3 className="text-green-400 font-semibold text-xl">
                     🔧 Tools Used
                   </h3>
-                  <ul className="text-gray-400 text-sm space-y-1">
+                  <ul className="text-gray-400 text-base space-y-2">
                     {project.tools?.map((tool, i) => <li key={i}>- {tool}</li>)}
                   </ul>
                 </div>
 
                 {/* Features */}
-                <div className="mb-3">
-                  <h3 className="text-purple-400 font-semibold">🚀 Features</h3>
-                  <ul className="text-gray-400 text-sm space-y-1">
+                <div className="mb-4">
+                  <h3 className="text-purple-400 font-semibold text-xl">
+                    🚀 Features
+                  </h3>
+                  <ul className="text-gray-400 text-base space-y-2">
                     {project.features?.map((feature, i) => (
                       <li key={i}>- {feature}</li>
                     ))}
@@ -173,7 +180,7 @@ const HomeInfo = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-400 hover:text-emerald-600 font-semibold"
+                    className="text-emerald-400 hover:text-emerald-600 font-semibold text-lg"
                   >
                     🔗 View Project
                   </a>
