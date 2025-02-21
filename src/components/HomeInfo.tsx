@@ -31,7 +31,14 @@ const projects = [
     title: "Stud.io",
     description:
       "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning.",
-    techStack: ["Next.js", "React", "Node.js", "Flask", "Python", "MongoDB Atlas"],
+    techStack: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Flask",
+      "Python",
+      "MongoDB Atlas",
+    ],
     tools: [
       "OpenAI API (LLM-powered flashcard generation)",
       "Q-Learning (Reinforcement Learning for performance tracking)",
@@ -91,90 +98,95 @@ const projects = [
   },
 ];
 
-
 const HomeInfo = () => {
-
   const [showProjects, setShowProjects] = useState(false);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black">
       {/* Full-Screen Modal */}
       {showProjects && (
-  <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-8 z-50 overflow-y-auto">
-    
-    {/* Close Button */}
-    <button
-      onClick={() => setShowProjects(false)}
-      className="fixed top-4 left-4 text-white hover:text-red-500 text-2xl font-bold"
-    >
-      Exit
-    </button>
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-8 z-50 overflow-y-auto">
+          {/* Close Button */}
+          <button
+            onClick={() => setShowProjects(false)}
+            className="fixed top-4 left-4 text-white hover:text-red-500 text-2xl font-bold"
+          >
+            Exit
+          </button>
 
-    {/* Project List */}
-    <div className="w-full max-w-3xl mx-auto space-y-6">
-      {projects.map((project, index) => (
-        <div key={index} className="bg-black bg-opacity-60 text-white p-6 rounded-lg shadow-lg w-full border border-gray-700">
-          {/* Project Title */}
-          <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-          
-          {/* Description */}
-          <p className="text-gray-300 text-sm mb-3">{project.description}</p>
+          {/* Project List */}
+          <div className="w-full max-w-3xl mx-auto space-y-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-black bg-opacity-60 text-white p-6 rounded-lg shadow-lg w-full border border-gray-700"
+              >
+                {/* Project Title */}
+                <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
 
-          {/* Achievements */}
-          {project.achievements?.length > 0 && (
-            <div className="mb-3">
-              <h3 className="text-yellow-400 font-semibold">🏆 Achievements</h3>
-              <ul className="text-gray-400 text-sm space-y-1">
-                {project.achievements.map((achievement, i) => (
-                  <li key={i}>- {achievement}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+                {/* Description */}
+                <p className="text-gray-300 text-sm mb-3">
+                  {project.description}
+                </p>
 
-          {/* Tech Stack */}
-          <div className="mb-3">
-            <h3 className="text-blue-400 font-semibold">🛠 Tech Stack</h3>
-            <p className="text-gray-400 text-sm">{project.techStack?.join(", ")}</p>
+                {/* Achievements */}
+                {project.achievements?.length > 0 && (
+                  <div className="mb-3">
+                    <h3 className="text-yellow-400 font-semibold">
+                      🏆 Achievements
+                    </h3>
+                    <ul className="text-gray-400 text-sm space-y-1">
+                      {project.achievements.map((achievement, i) => (
+                        <li key={i}>- {achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Tech Stack */}
+                <div className="mb-3">
+                  <h3 className="text-blue-400 font-semibold">🛠 Tech Stack</h3>
+                  <p className="text-gray-400 text-sm">
+                    {project.techStack?.join(", ")}
+                  </p>
+                </div>
+
+                {/* Tools Used */}
+                <div className="mb-3">
+                  <h3 className="text-green-400 font-semibold">
+                    🔧 Tools Used
+                  </h3>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    {project.tools?.map((tool, i) => <li key={i}>- {tool}</li>)}
+                  </ul>
+                </div>
+
+                {/* Features */}
+                <div className="mb-3">
+                  <h3 className="text-purple-400 font-semibold">🚀 Features</h3>
+                  <ul className="text-gray-400 text-sm space-y-1">
+                    {project.features?.map((feature, i) => (
+                      <li key={i}>- {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Project Link */}
+                {project.link && project.link !== "#" && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-600 font-semibold"
+                  >
+                    🔗 View Project
+                  </a>
+                )}
+              </div>
+            ))}
           </div>
-
-          {/* Tools Used */}
-          <div className="mb-3">
-            <h3 className="text-green-400 font-semibold">🔧 Tools Used</h3>
-            <ul className="text-gray-400 text-sm space-y-1">
-              {project.tools?.map((tool, i) => (
-                <li key={i}>- {tool}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Features */}
-          <div className="mb-3">
-            <h3 className="text-purple-400 font-semibold">🚀 Features</h3>
-            <ul className="text-gray-400 text-sm space-y-1">
-              {project.features?.map((feature, i) => (
-                <li key={i}>- {feature}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Project Link */}
-          {project.link && project.link !== "#" && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-600 font-semibold"
-            >
-              🔗 View Project
-            </a>
-          )}
         </div>
-      ))}
-    </div>
-  </div>
-)}
-
+      )}
 
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white pb-5">
         <center>
@@ -205,10 +217,13 @@ const HomeInfo = () => {
         Please feel free to <span className="text-blue-500">explore</span> the
         <span className="text-yellow-400"> links </span> I've{" "}
         <span className="text-blue-500">shared</span> down below - This includes
-        a <a href="https://williams-reflections.vercel.app/">
-            <span className="text-emerald-400 hover:text-emerald-800">blogsite</span>
-        </a> - a place where I
-        <span className="text-blue-500"> share</span> my{" "}
+        a{" "}
+        <a href="https://williams-reflections.vercel.app/">
+          <span className="text-emerald-400 hover:text-emerald-800">
+            blogsite
+          </span>
+        </a>{" "}
+        - a place where I<span className="text-blue-500"> share</span> my{" "}
         <span className="text-yellow-400">thoughts</span> and{" "}
         <span className="text-yellow-400">reflections</span> from my day to day
         life.
@@ -240,7 +255,7 @@ const HomeInfo = () => {
           <button
             onClick={() => {
               setShowProjects((prev) => {
-                console.log(!prev); 
+                console.log(!prev);
                 return !prev;
               });
             }}
