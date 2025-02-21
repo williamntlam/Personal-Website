@@ -2,7 +2,6 @@ import { Typewriter } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const projects = [
   {
@@ -129,12 +128,9 @@ const HomeInfo = () => {
                   {project.description}
                 </p>
 
-                {/* Achievements */}
-                {project.achievements?.length > 0 && (
+                {project.achievements && project.achievements.length > 0 && (
                   <div className="mb-3">
-                    <h3 className="text-yellow-400 font-semibold">
-                      🏆 Achievements
-                    </h3>
+                    <h3 className="text-yellow-400 font-semibold">🏆 Achievements</h3>
                     <ul className="text-gray-400 text-sm space-y-1">
                       {project.achievements.map((achievement, i) => (
                         <li key={i}>- {achievement}</li>
