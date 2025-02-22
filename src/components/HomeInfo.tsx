@@ -39,7 +39,7 @@ const projects = [
   {
     title: "DriveInsight",
     description:
-      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads. I couldn't have done made this without my amazing teammates: Aidan Yau, Elsie Chan, and Aidan Ng.",
+      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads. I couldn't have made this without my amazing teammates: Aidan Yau, Elsie Chan, and Aidan Ng.",
     techStack: ["React Native", "Python", "Flask", "MongoDB Atlas"],
     tools: [
       "Roboflow (Computer Vision Models)",
