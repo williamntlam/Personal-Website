@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Stud.io",
     description:
-      "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning.",
+      "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning. Shoutout to my teammates Kevin and Liam!",
     techStack: [
       "Next.js",
       "React",
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "DriveInsight",
     description:
-      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads.",
+      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads. I couldn't have done this without my teammates: Aidan Yau, Elsie Chan, and Aidan Ng.",
     techStack: ["React Native", "Python", "Flask", "MongoDB Atlas"],
     tools: [
       "Roboflow (Computer Vision Models)",
