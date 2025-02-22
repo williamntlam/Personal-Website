@@ -15,6 +15,7 @@ const projects = [
       "Flask",
       "Python",
       "MongoDB Atlas",
+      "OpenAI (LLM)"
     ],
     tools: [
       "OpenAI API (LLM-powered flashcard generation)",
