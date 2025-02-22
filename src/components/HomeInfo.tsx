@@ -245,7 +245,7 @@ const HomeInfo = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/william-lam-b3a8a2213/"
+            href="https://www.linkedin.com/in/william-nhut-lam-b3a8a2213/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-center"
