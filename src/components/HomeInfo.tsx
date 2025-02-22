@@ -5,28 +5,6 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "DriveInsight",
-    description:
-      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads.",
-    techStack: ["React Native", "Python", "Flask", "MongoDB Atlas"],
-    tools: [
-      "Roboflow (Computer Vision Models)",
-      "Google Gemini (LLM)",
-      "Auth0 (User Authentication)",
-      "Google Cloud Storage",
-      "Vector Search",
-    ],
-    link: "https://devpost.com/software/idk-1xupmo",
-    achievements: ["HackThe6ix 2024 - Winner For Best Use Of MongoDB"],
-    features: [
-      "Real-time driving behavior analysis using Computer Vision and gyroscope data.",
-      "Personalized insights and feedback powered by Google Gemini LLM.",
-      "Secure user authentication via Auth0.",
-      "Stores and analyzes driving trip metadata using MongoDB Atlas and Vector Search.",
-      "Cloud integration for securely storing driving videos in Google Cloud Storage.",
-    ],
-  },
-  {
     title: "Stud.io",
     description:
       "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning.",
@@ -55,6 +33,30 @@ const projects = [
       "Real-time performance tracking and feedback from AI-powered evaluation.",
       "Instant notifications when students perform poorly in a subject.",
     ],
+    image: "nsbe_hacks_win.png"
+  },
+  {
+    title: "DriveInsight",
+    description:
+      "A cutting-edge system designed to enhance road safety using AI, Computer Vision, and gyroscope data. It analyzes driving behavior, offering meaningful insights and feedback to promote better driving habits and safer roads.",
+    techStack: ["React Native", "Python", "Flask", "MongoDB Atlas"],
+    tools: [
+      "Roboflow (Computer Vision Models)",
+      "Google Gemini (LLM)",
+      "Auth0 (User Authentication)",
+      "Google Cloud Storage",
+      "Vector Search",
+    ],
+    link: "https://devpost.com/software/idk-1xupmo",
+    achievements: ["HackThe6ix 2024 - Winner For Best Use Of MongoDB"],
+    features: [
+      "Real-time driving behavior analysis using Computer Vision and gyroscope data.",
+      "Personalized insights and feedback powered by Google Gemini LLM.",
+      "Secure user authentication via Auth0.",
+      "Stores and analyzes driving trip metadata using MongoDB Atlas and Vector Search.",
+      "Cloud integration for securely storing driving videos in Google Cloud Storage.",
+    ],
+    image: "/hack_the_six_win.jpg"
   },
   {
     title: "ProductivityMate",
@@ -70,6 +72,7 @@ const projects = [
       "Pomodoro Timer: Helps maintain focus using the Pomodoro technique.",
       "Modern UI: Styled with Tailwind CSS for a responsive and sleek design.",
     ],
+    image: ""
   },
   {
     title: "Scriptorium",
@@ -94,6 +97,7 @@ const projects = [
       "Dark/Light Mode: UI supports theme toggling for better accessibility.",
       "Responsive Design: Works across all devices (desktop, tablet, mobile).",
     ],
+    image: ""
   },
 ];
 
@@ -104,92 +108,99 @@ const HomeInfo = () => {
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black">
       {/* Full-Screen Modal */}
       {showProjects && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-10 z-50 overflow-y-auto min-h-screen">
-          {/* Close Button */}
-          <button
-            onClick={() => setShowProjects(false)}
-            className="fixed top-8 left-8 text-white hover:text-red-500 text-2xl font-bold"
-          >
-            Exit
-          </button>
+  <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex flex-col items-start p-10 z-50 overflow-y-auto min-h-screen">
+    
+    {/* Close Button */}
+    <button
+      onClick={() => setShowProjects(false)}
+      className="fixed top-8 left-8 text-white hover:text-red-500 text-2xl font-bold"
+    >
+      Exit
+    </button>
 
-          {/* Project List */}
-          <div className="w-full max-w-4xl mx-auto space-y-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-black bg-opacity-60 text-white p-8 rounded-lg shadow-lg w-full border border-gray-600"
-              >
-                {/* Project Title */}
-                <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+    {/* Project List */}
+    <div className="w-full max-w-4xl mx-auto space-y-8">
+      {projects.map((project, index) => (
+        <div
+          key={index}
+          className="bg-black bg-opacity-60 text-white p-8 rounded-lg shadow-lg w-full border border-gray-600"
+        >
+          {/* Project Image (Only Display if Not Empty) */}
+          {project.image && (
+  <div className="w-full flex justify-center mb-6">
+    <img
+      src={project.image}
+      alt={project.title}
+      width="800"
+      height="450"
+      className="rounded-lg shadow-md object-cover"
+    />
+  </div>
+)}
 
-                {/* Description */}
-                <p className="text-gray-300 text-base mb-4">
-                  {project.description}
-                </p>
 
-                {/* Achievements */}
-                {project.achievements && project.achievements.length > 0 && (
-                  <div className="mb-4">
-                    <h3 className="text-yellow-400 font-semibold text-xl">
-                      🏆 Achievements
-                    </h3>
-                    <ul className="text-gray-400 text-base space-y-2">
-                      {project.achievements.map((achievement, i) => (
-                        <li key={i}>- {achievement}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+          {/* Project Title */}
+          <h2 className="text-2xl font-bold mb-4 text-center">{project.title}</h2>
 
-                {/* Tech Stack */}
-                <div className="mb-4">
-                  <h3 className="text-blue-400 font-semibold text-xl">
-                    🛠 Tech Stack
-                  </h3>
-                  <p className="text-gray-400 text-base">
-                    {project.techStack?.join(", ")}
-                  </p>
-                </div>
+          {/* Description */}
+          <p className="text-gray-300 text-base mb-4 text-center">{project.description}</p>
 
-                {/* Tools Used */}
-                <div className="mb-4">
-                  <h3 className="text-green-400 font-semibold text-xl">
-                    🔧 Tools Used
-                  </h3>
-                  <ul className="text-gray-400 text-base space-y-2">
-                    {project.tools?.map((tool, i) => <li key={i}>- {tool}</li>)}
-                  </ul>
-                </div>
+          {/* Achievements */}
+          {project.achievements && project.achievements.length > 0 && (
+            <div className="mb-4">
+              <h3 className="text-yellow-400 font-semibold text-xl">🏆 Achievements</h3>
+              <ul className="text-gray-400 text-base space-y-2">
+                {project.achievements.map((achievement, i) => (
+                  <li key={i}>- {achievement}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-                {/* Features */}
-                <div className="mb-4">
-                  <h3 className="text-purple-400 font-semibold text-xl">
-                    🚀 Features
-                  </h3>
-                  <ul className="text-gray-400 text-base space-y-2">
-                    {project.features?.map((feature, i) => (
-                      <li key={i}>- {feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Project Link */}
-                {project.link && project.link !== "#" && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-emerald-400 hover:text-emerald-600 font-semibold text-lg"
-                  >
-                    🔗 View Project
-                  </a>
-                )}
-              </div>
-            ))}
+          {/* Tech Stack */}
+          <div className="mb-4">
+            <h3 className="text-blue-400 font-semibold text-xl">🛠 Tech Stack</h3>
+            <p className="text-gray-400 text-base">{project.techStack?.join(", ")}</p>
           </div>
+
+          {/* Tools Used */}
+          <div className="mb-4">
+            <h3 className="text-green-400 font-semibold text-xl">🔧 Tools Used</h3>
+            <ul className="text-gray-400 text-base space-y-2">
+              {project.tools?.map((tool, i) => (
+                <li key={i}>- {tool}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Features */}
+          <div className="mb-4">
+            <h3 className="text-purple-400 font-semibold text-xl">🚀 Features</h3>
+            <ul className="text-gray-400 text-base space-y-2">
+              {project.features?.map((feature, i) => (
+                <li key={i}>- {feature}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Project Link */}
+          {project.link && project.link !== "#" && (
+            <div className="text-center mt-4">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-400 hover:text-emerald-600 font-semibold text-lg"
+              >
+                🔗 View Project
+              </a>
+            </div>
+          )}
         </div>
-      )}
+      ))}
+    </div>
+  </div>
+)}
 
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white pb-5">
         <center>
