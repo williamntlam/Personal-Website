@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Stud.io",
     description:
-      "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning. Shoutout to my teammates Kevin and Liam!",
+      "An intelligent flashcard generation app that transforms lecture notes and other study materials into interactive questions using AI, reinforcement learning, and vector search to optimize student learning. Shoutout to my teammates, Kevin and Liam!",
     techStack: [
       "Next.js",
       "React",
